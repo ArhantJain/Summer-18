@@ -7,7 +7,7 @@ using namespace std;
 #define l  double 
 #define endl "\n"
 
-long long int candies(vector <int> & ratings)
+long long int candies(vector <int> &ratings)
 {
 	long long int sum,size,i;
 	size = ratings.size();
