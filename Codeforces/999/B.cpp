@@ -27,28 +27,51 @@ int main()
 {
 	ios_base::sync_with_stdio(false);
 	cin.tie(0); cout.tie(0);
-	ll int x,k,ans,t1,t2;
-	cin >> x >> k;
-	if ( x == 0)
+	ll int n,i;
+	string str;
+	cin >> n;
+	cin >> str;
+	for(i=1;i<=n;i++)
 	{
-		cout << x << endl;
-		return 0;
-	}
-	else  // 2^(K+1)*x - 2^k + 1 is the expected k+1 term
-	{
-		if ( k == 0)
+		if( n%i == 0)
 		{
-			ans = (2*x)%MOD;
-		}
-		else
-		{
-			x = x%MOD;
-			t1 = (fast_pow(2,k+1)*x)%MOD; // term 1
-			t2 = (fast_pow(2,k))%MOD;   // term 2
-
-			ans = (t1-t2+1+MOD)%MOD;
+			reverse(str.begin(),str.begin()+i);
 		}
 	}
-	cout << ans << endl;
+	cout << str << endl;
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
